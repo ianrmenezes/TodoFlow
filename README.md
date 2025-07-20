@@ -29,19 +29,13 @@ A beautiful, modern todo list application with glassmorphism design and dark/lig
 2. Open `index.html` in your browser
 3. Start adding your todos!
 
-## Deployment Options
+## Deployment
 
-### GitHub Pages (Recommended)
+This project is deployed using **GitHub Pages**.
 
-1. **Create a GitHub repository:**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git remote add origin https://github.com/yourusername/todoflow.git
-   git push -u origin main
-   ```
+### How to Deploy Your Own Copy:
 
+1. **Fork this repository** or create your own
 2. **Enable GitHub Pages:**
    - Go to your repository on GitHub
    - Click "Settings" → "Pages"
@@ -49,44 +43,12 @@ A beautiful, modern todo list application with glassmorphism design and dark/lig
    - Choose "main" branch and "/ (root)" folder
    - Click "Save"
 
-3. **Your app will be live at:** `https://yourusername.github.io/todoflow`
+3. **Your app will be live at:** `https://yourusername.github.io/repository-name`
 
-### Netlify (Free & Fast)
-
-1. **Drag & Drop:**
-   - Go to [netlify.com](https://netlify.com)
-   - Drag your project folder to the deploy area
-   - Get instant live URL
-
-2. **Or connect GitHub:**
-   - Connect your GitHub repository
-   - Automatic deployments on every push
-
-### Vercel (Free & Fast)
-
-1. **Install Vercel CLI:**
-   ```bash
-   npm i -g vercel
-   ```
-
-2. **Deploy:**
-   ```bash
-   vercel
-   ```
-
-### Firebase Hosting (Free)
-
-1. **Install Firebase CLI:**
-   ```bash
-   npm install -g firebase-tools
-   ```
-
-2. **Initialize & Deploy:**
-   ```bash
-   firebase login
-   firebase init hosting
-   firebase deploy
-   ```
+### Alternative Deployment Options:
+- **Netlify:** Drag & drop your project folder to [netlify.com](https://netlify.com)
+- **Vercel:** Use `vercel` CLI for instant deployment
+- **Firebase:** Use Firebase Hosting for Google's infrastructure
 
 ## File Structure
 
