@@ -235,6 +235,12 @@ class TodoFlow {
         this.updateCardColors('dark');
         // Re-render todos with new theme
         this.renderTodos();
+        // Update subtitle color
+        const subtitle = document.getElementById('subtitle');
+        if (subtitle) {
+            subtitle.classList.remove('text-gray-700', 'text-gray-500');
+            subtitle.classList.add('text-gray-300');
+        }
     }
 
     applySolidMode() {
@@ -249,12 +255,19 @@ class TodoFlow {
         this.updateCardColors('light');
         // Re-render todos with new theme
         this.renderTodos();
+        // Update subtitle color
+        const subtitle = document.getElementById('subtitle');
+        if (subtitle) {
+            subtitle.classList.remove('text-gray-300');
+            subtitle.classList.add('text-gray-700');
+        }
     }
 
     updateCardColors(theme) {
-        const cards = document.querySelectorAll('.bg-gray-800, .bg-gray-700, .bg-gray-600');
+        const cards = document.querySelectorAll('.bg-gray-800, .bg-gray-700, .bg-gray-600, .bg-white');
         const inputs = document.querySelectorAll('input, .bg-gray-700');
         const buttons = document.querySelectorAll('.filter-btn');
+        const todoTexts = document.querySelectorAll('.todo-text');
         
         cards.forEach(card => {
             if (theme === 'light') {
@@ -285,6 +298,24 @@ class TodoFlow {
             } else {
                 btn.classList.remove('bg-gray-200', 'hover:bg-gray-300', 'text-gray-700');
                 btn.classList.add('bg-gray-700', 'hover:bg-gray-600');
+            }
+        });
+
+        todoTexts.forEach(span => {
+            if (theme === 'light') {
+                span.classList.remove('text-white', 'text-gray-400');
+                if (!span.classList.contains('line-through')) {
+                    span.classList.add('text-gray-700');
+                } else {
+                    span.classList.add('text-gray-500');
+                }
+            } else {
+                span.classList.remove('text-gray-700', 'text-gray-500');
+                if (!span.classList.contains('line-through')) {
+                    span.classList.add('text-white');
+                } else {
+                    span.classList.add('text-gray-400');
+                }
             }
         });
     }
