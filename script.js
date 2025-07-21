@@ -238,7 +238,7 @@ class TodoFlow {
         // Update subtitle color
         const subtitle = document.getElementById('subtitle');
         if (subtitle) {
-            subtitle.classList.remove('text-gray-700', 'text-gray-500');
+            subtitle.classList.remove('text-gray-900', 'font-semibold', 'text-gray-700', 'text-gray-500');
             subtitle.classList.add('text-gray-300');
         }
     }
@@ -258,8 +258,8 @@ class TodoFlow {
         // Update subtitle color
         const subtitle = document.getElementById('subtitle');
         if (subtitle) {
-            subtitle.classList.remove('text-gray-300');
-            subtitle.classList.add('text-gray-700');
+            subtitle.classList.remove('text-gray-300', 'text-gray-700', 'text-gray-500');
+            subtitle.classList.add('text-gray-900', 'font-semibold');
         }
     }
 
