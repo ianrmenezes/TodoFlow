@@ -162,6 +162,13 @@
         .todo-scroll-container {
             overflow-y: scroll !important;
         }
+
+        /* Add minimal extra content to make scrollbar functional */
+        .todo-scroll-container::after {
+            content: '';
+            display: block;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
