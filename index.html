@@ -208,7 +208,7 @@
 
         <!-- Filter Buttons -->
         <div class="flex justify-between items-center mb-6">
-            <div class="flex gap-2">
+            <div class="flex gap-2 items-center">
                 <button class="filter-btn active px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-all duration-300 shadow-sm" data-filter="all">
                     All
                 </button>
@@ -218,6 +218,7 @@
                 <button class="filter-btn px-4 py-2 rounded-full bg-gray-600 hover:bg-gray-500 transition-all duration-300 shadow-sm" data-filter="completed">
                     Completed
                 </button>
+                <span id="todoStats" class="text-sm text-gray-400 ml-4">0 active • 0 completed • 0 total</span>
             </div>
             <button 
                 id="clearCompletedBtn" 
@@ -238,7 +239,7 @@
 
         <!-- Footer Stats -->
         <div class="text-center text-sm text-gray-400 mt-auto pt-4">
-            <span id="todoStats">0 active • 0 completed • 0 total</span>
+            <!-- Stats moved to filter section -->
         </div>
     </div>
 
