@@ -40,7 +40,7 @@
                 radial-gradient(ellipse 800px 400px at 20% 80%, rgba(30, 60, 120, 0.4) 0%, transparent 50%),
                 radial-gradient(ellipse 600px 300px at 80% 20%, rgba(40, 80, 160, 0.3) 0%, transparent 50%),
                 radial-gradient(ellipse 1000px 500px at 40% 40%, rgba(20, 40, 100, 0.2) 0%, transparent 50%) !important;
-            animation: waveMove 20s ease-in-out infinite;he
+            animation: waveMove 20s ease-in-out infinite;
         }
 
         body {
@@ -137,10 +137,35 @@
             0% { transform: translateX(-50%); }
             100% { transform: translateX(0%); }
         }
+
+        /* Custom scrollbar for the todo list */
+        .todo-scroll-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .todo-scroll-container::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .todo-scroll-container::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 4px;
+            min-height: 40px;
+        }
+
+        .todo-scroll-container::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Always show scrollbar */
+        .todo-scroll-container {
+            overflow-y: scroll !important;
+        }
     </style>
 </head>
 <body>
-    <div class="container mx-auto px-4 py-8 max-w-2xl">
+    <div class="container mx-auto px-4 py-8 max-w-2xl min-h-screen flex flex-col">
         <!-- Header -->
         <div class="relative mb-8">
             <div class="flex justify-between items-start">
@@ -196,12 +221,16 @@
         </div>
 
         <!-- Todo List -->
-        <div id="todoList" class="space-y-3 mb-6">
-            <!-- Todo items will be dynamically added here -->
+        <div class="flex-1 min-h-0">
+            <div class="max-h-96 todo-scroll-container pr-2 mb-6">
+                <div id="todoList" class="space-y-3">
+                    <!-- Todo items will be dynamically added here -->
+                </div>
+            </div>
         </div>
 
         <!-- Footer Stats -->
-        <div class="text-center text-sm text-gray-400">
+        <div class="text-center text-sm text-gray-400 mt-auto pt-4">
             <span id="todoStats">0 active • 0 completed • 0 total</span>
         </div>
     </div>
